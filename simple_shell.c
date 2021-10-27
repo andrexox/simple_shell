@@ -4,10 +4,10 @@
 /**
  * test - shell function used in refractoring
  * @p: struct with all vars
- * @params: parameters
+ *
  * Return: int
  */
-int test(params *p)
+int test(parameters *p)
 {
 	int tkn;
 	char *aux = NULL;
@@ -37,6 +37,7 @@ int test(params *p)
  * main - simple UNIX command line interpreter
  * @av: argument array
  * @ac: argument count
+ *
  * Return: 0
  */
 int main(int __attribute__((unused)) ac, char **av)
@@ -45,7 +46,7 @@ int main(int __attribute__((unused)) ac, char **av)
 	int loop = 1;
 	size_t len = 0;
 
-	params p;
+	parameters p;
 
 	p.argv = NULL;
 	p.buff = NULL;
