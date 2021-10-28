@@ -1,0 +1,55 @@
+.TH SIMPLE_SHELL 1 "21 October 2021" "1.0" "simple_shell manual"
+
+.SH NAME
+.B simple_shell
+- A simple UNIX command interpreter
+
+.SH SYNOPSIS
+.B int hsh(void)
+
+.SH DESCRIPTION
+The simple shell reads lines from a file or the terminal, then interprets and executes them.
+Users can also type valid commands onto the running shell.
+
+.SH USAGE
+Below are some ways some of the commands can be run:
+
+.B -exit [status]
+This terminates the shell process.
+.RE
+
+.B -unsetenv [variable]
+This unsets an environmental variable of given name.
+.RE
+
+.B -cd [directory]
+This changes current working directory to chosen directory. If '-' is used after 'cd',
+it will change to the previous working directory, and if '..' is used, it will change 
+to the parent directory.
+.RE
+
+.B -setenv [key] [value]
+This sets an environmental variable with key-value pair.
+.RE
+
+.B -help [builtin]
+This retrieves help on how to use builtin.
+.RE
+
+.SH SHELL ENVIRONMENT
+Below are some common environments in the shell:
+
+.B HOME
+This is the users default directory.
+.RE
+
+.B PATH
+This is the search path for any executables.
+.RE
+
+.SH NOTES
+Any errors detected by the shell will allow the shell to exit without an exit status.
+.RE
+
+.SH AUTHORS
+Ogundele Ifeoluwa and Opeoluwadigba Idowu.
