@@ -4,9 +4,9 @@
  * _setenv - adds the environment variables
  * @envp: pointer to the environment variables
  *
- * Return: pointer to array of paths
+ * Return: pointer to the array
  */
-int _setenv(const char *name, const char *value, char **envp);
+int _setenv(const char *name, const char *value, char **envp)
 {
 	char *path = _getenv("PATH", envp);
 	char **pathparsed = fullpath(path, ENVDELIM);
