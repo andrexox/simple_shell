@@ -56,13 +56,13 @@ void free_list(list_t *head)
 	list_t *dup;
 
 	if (head == NULL)
-	  return;
+	return;
 	for (head->next != NULL; head = dup)
-	  {
+	{
 	    dup = head->next;
 	    free(head->str);
 	    free(head);
-	  }
+	}
 	free(head->str);
 	free(head);
 }
