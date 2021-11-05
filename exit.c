@@ -5,6 +5,7 @@
  *
  * Return: Always 0
  */
+int exit(void);
 int exit(void)
 {
 return (0);

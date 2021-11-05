@@ -12,7 +12,7 @@ void _printenv(void)
 
 	while (environ[i])
 	{
-		_puts(environ[i]);
+		puts(environ[i]);
 		i++;
 	}
 }
@@ -56,7 +56,7 @@ int _executeBuiltIn(char **tokens)
 	{
 		if (tokens[1] && tokens[2])
 		{
-			_setenv(tokens[1], tokens[2]);
+			_getenv(tokens[1], tokens[2]);
 			return (0);
 		}
 		printf("Usage: setenv var_name var_value\n");
@@ -66,7 +66,7 @@ int _executeBuiltIn(char **tokens)
 	{
 		if (tokens[1])
 		{
-			_unsetenv(tokens[1]);
+			unsetenv(tokens[1]);
 			return (0);
 		}
 		printf("Usage: unsetenv VAR_NAME\n");
